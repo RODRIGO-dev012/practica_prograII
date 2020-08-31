@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 void main(){
@@ -50,11 +52,28 @@ class Myapp extends StatelessWidget{
                 labelText: ''),
               ),
 
-
-
-
-
-              const SizedBox(height: 100),/////////aca es para boton enviar///
+              new Container(
+                padding: new EdgeInsets.all(30.0),
+                child: new Center(
+                  child: new Column(
+                    children: <Widget>[
+                      new Row(
+                        children: <Widget>[
+                          new Checkbox(value: false, onChanged: null),
+                          new Text("Send a copy to yourself",
+                            style: TextStyle(fontSize: 20),
+                          ),
+                        ],
+                      ),
+                      new Checkbox(value: false, onChanged: null,),
+                      new Text("Suscribe to our newsltter",
+                        style: TextStyle(fontSize: 20),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              const SizedBox(height: 15),/////////aca es para boton enviar///
               RaisedButton(
                 onPressed: () {},
                 textColor: Colors.white,
@@ -72,7 +91,7 @@ class Myapp extends StatelessWidget{
                   padding: const EdgeInsets.all(25.0),
                   child: const Text(
                     "ENVIAR",
-                    style: TextStyle(fontSize: 20),
+                    style: TextStyle(fontSize: 30),
                   ),
                 )
               ),
